@@ -43,6 +43,15 @@ export const signin = async (req, res, next) => {
   }
 };
 
+export const signout = async (req, res, next) => {
+  try {
+    res.clearCookie('access_token');
+    res.status(200).json({message: 'User has been logged out!'});
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const google = async (req, res, next) => {
   const { email, password } = req.body;
   try {
