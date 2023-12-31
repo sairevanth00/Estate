@@ -153,6 +153,7 @@ export default function CreateListing() {
       setLoading(false);
     }
   };
+
   return (
     <main className="p-3 max-w-4xl mx-auto">
       <h1 className="text-3xl font-semibold text-center my-7">
@@ -300,7 +301,6 @@ export default function CreateListing() {
                 />
                 <div className="flex flex-col items-center">
                   <p>Discounted price</p>
-
                   {formData.type === "rent" && (
                     <span className="text-xs">($ / month)</span>
                   )}
